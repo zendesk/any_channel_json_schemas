@@ -1,0 +1,10 @@
+{
+  "anyOf": [
+    { "$ref": "event_callback_create_integration.json" },
+    { "$ref": "event_callback_destroy_integration.json" },
+    { "$ref": "event_callback_create_integration_instance.json" },
+    { "$ref": "event_callback_destroy_integration_instance.json" },
+    { "$ref": "event_callback_pull_request.json" },
+    { "$ref": "event_callback_resources_created_from_external_ids.json" }
+  ]
+}

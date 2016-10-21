@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": ["instance_push_id", "external_resources"],
+  "properties": {
+    "instance_push_id": {"type": "string"},
+    "request_id": {"type": "string"},
+    "external_resources": {"type": "array", "items": { "$ref": "external_resource.json"} }
+  }
+}

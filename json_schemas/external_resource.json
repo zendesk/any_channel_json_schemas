@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "required": ["external_id", "message", "author", "created_at"],
+  "properties": {
+    "external_id": {"type": "string"},
+    "message": {"type": "string"},
+    "html_message": {"type": "string"},
+    "parent_id": {"type": "string"},
+    "thread_id": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "author": {"$ref": "#/definitions/author"},
+    "display_info": {"type": "array", "items": {"$ref": "#/definitions/display_info"} },
+    "allow_channelback": {"type":"boolean"},
+    "fields": {"type": "array", "items": {"$ref": "#/definitions/field_value"} }
+  },
+  "definitions": {
+    "external_resource": {
+    },
+    "author": {
+      "type": "object",
+      "required": ["external_id"],
+      "properties": {
+        "external_id": {"type": "string"},
+        "name": {"type": "string"},
+        "image_url": {"type": "string"},
+        "locale": {"type": "string"}
+      }
+    },
+    "display_info": {
+      "type": "object",
+      "required": ["type", "data"],
+      "properties": {
+        "type": {"type": "string"},
+        "data": {"type": "object"}
+      }
+    },
+    "field_value": {
+      "type": "object",
+      "required": ["id", "value"],
+      "properties": {
+        "id": {"type": ["integer", "string"]},
+        "value": {"type": "any"}
+      }
+    }
+  }
+}

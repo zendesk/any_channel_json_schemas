@@ -1,0 +1,33 @@
+{
+  "$ref": "#/definitions/manifest",
+  "definitions": {
+    "manifest": {
+      "type": "object",
+      "required": ["name", "id", "urls"],
+      "properties": {
+        "name": {"type": "string"},
+        "id": {"type": "string"},
+        "version": {"type": "string"},
+        "author": {"type": "string"},
+        "push_client_id": {"type": "string"},
+        "urls": { "$ref": "#/definitions/manifest/definitions/urls"}
+      },
+      "definitions": {
+        "urls": {
+          "type": "object",
+          "required": ["admin_ui"],
+          "properties": {
+            "admin_ui": {"type": "string", "format": "https-url"},
+            "pull_url": {"type": "string", "format": "https-url"},
+            "channelback_url": {"type": "string", "format": "https-url"},
+            "clickthrough_url": {"type": "string", "format": "https-url"},
+            "healthcheck_url": {"type": "string"},
+            "about_url": {"type": "string"},
+            "dashboard_url": {"type": "string"},
+            "event_callback_url": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}

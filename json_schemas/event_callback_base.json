@@ -1,0 +1,28 @@
+{
+  "$ref": "#/definitions/event_callback_base",
+  "definitions": {
+    "event_callback_base": {
+      "type": "object",
+      "required": ["type_id", "timestamp", "subdomain", "integration_name", "integration_id", "data"],
+      "properties": {
+        "type_id": {
+          "type": "string",
+          "enum": [
+            "create_integration",
+            "destroy_integration",
+            "create_integration_instance",
+            "destroy_integration_instance",
+            "pull_request",
+            "resources_created_from_external_ids"
+          ]
+        },
+        "timestamp": {"type": "time"},
+        "subdomain": {"type": "string"},
+        "integration_name": {"type": "string"},
+        "integration_id": {"type": "string"},
+        "data": {"type": "object"},
+        "error": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$ref": "event_callback_base.json#/definitions/event_callback_base",
+  "properties": {
+    "type_id": {"type": "string", "pattern": "^resources_created_from_external_ids$"},
+    "data": {
+      "type": "object",
+      "required": ["request_id", "resource_events"],
+      "properties": {
+        "request_id": {"type": "string"},
+        "resource_events": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {"$ref": "#/definitions/comment_on_new_ticket"},
+              {"$ref": "#/definitions/comment_on_existing_ticket"},
+              {"$ref": "#/definitions/comment_on_new_follow_up_ticket"},
+              {"$ref": "#/definitions/external_id_associated_with_channelback"}
+            ]
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "resource_created_from_external_id": {
+      "type": "object",
+      "required": ["type_id", "external_id", "comment_id", "ticket_id"],
+      "properties": {
+        "external_id": {"type": "string"},
+        "comment_id": {"type": "number"},
+        "ticket_id": {"type": "number"}
+      }
+    },
+    "comment_on_new_ticket": {
+      "$ref": "#/definitions/resource_created_from_external_id",
+      "properties": {
+        "type_id": {"type": "string", "pattern": "^comment_on_new_ticket$"}
+      }
+    },
+    "comment_on_existing_ticket": {
+      "$ref": "#/definitions/resource_created_from_external_id",
+      "properties": {
+        "type_id": {"type": "string", "pattern": "^comment_on_existing_ticket$"}
+      }
+    },
+    "comment_on_new_follow_up_ticket": {
+      "$ref": "#/definitions/resource_created_from_external_id",
+      "required": ["follow_up_ticket_id"],
+      "properties": {
+        "type_id": {"type": "string", "pattern": "^comment_on_follow_up_ticket$"},
+        "follow_up_ticket_id": {"type": "number"}
+      }
+    },
+    "external_id_associated_with_channelback": {
+      "$ref": "#/definitions/resource_created_from_external_id",
+      "properties": {
+        "type_id": {"type": "string", "pattern": "^external_id_associated_with_channelback$"}
+      }
+    }
+  }
+}
