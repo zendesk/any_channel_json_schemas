@@ -5,10 +5,10 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{JSON schema files for the Zendesk Channels Framework.}
   gem.homepage      = 'https://github.com/zendesk/any_channel_json_schemas/ruby'
 
-  gem.files         = `git ls-files`.split("\n")
+  gem.files         = %w{lib/any_channel_json_schemas.rb README.md} + Dir.glob('json_schemas/*')
   gem.test_files    = `git ls-files -- spec/*`.split("\n")
   gem.name          = 'any_channel_json_schemas'
   gem.require_paths = ['lib']
-  gem.version       = '0.0.0'
+  gem.version       = '0.0.1'
   gem.license       = 'Apache-2.0'
 end
