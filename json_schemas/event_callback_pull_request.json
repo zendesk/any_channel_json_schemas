@@ -3,11 +3,24 @@
   "properties": {
     "data": {
       "type": "object",
-      "required": ["integration_instance_name", "url", "request_id"],
+      "required": ["integration_instance_name", "url", "request_id", "duplicate_external_ids"],
       "properties": {
         "integration_instance_name": {"type": "string"},
         "url": {"type": "string", "format": "https-url"},
-        "request_id": {"type": "string"}
+        "request_id": {"type": "string"},
+        "duplicate_external_ids": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["external_id", "request_id", "ticket_nice_id", "comment_id"],
+            "properties": {
+              "external_id": {"type": "string"},
+              "request_id": {"type": "string"},
+              "ticket_nice_id": {"type": "string"},
+              "comment_id": {"type": "string"}
+            }
+          }
+        }
       }
     }
   }
