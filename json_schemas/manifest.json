@@ -21,10 +21,10 @@
             "pull_url": {"type": "string", "format": "https-url"},
             "channelback_url": {"type": "string", "format": "https-url"},
             "clickthrough_url": {"type": "string", "format": "https-url"},
-            "healthcheck_url": {"type": "string"},
-            "about_url": {"type": "string"},
-            "dashboard_url": {"type": "string"},
-            "event_callback_url": {"type": "string"}
+            "healthcheck_url": {"type": "string", "format": "https-url"},
+            "about_url": {"type": "string", "format": "https-url"},
+            "dashboard_url": {"type": "string", "format": "https-url"},
+            "event_callback_url": {"type": "string", "format": "https-url"}
           }
         }
       }
