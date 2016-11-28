@@ -2,6 +2,8 @@
   "anyOf": [
     { "$ref": "event_callback_create_integration.json" },
     { "$ref": "event_callback_destroy_integration.json" },
+    { "$ref": "event_callback_activate_integration_instance.json" },
+    { "$ref": "event_callback_deactivate_integration_instance.json" },
     { "$ref": "event_callback_create_integration_instance.json" },
     { "$ref": "event_callback_destroy_integration_instance.json" },
     { "$ref": "event_callback_pull_request.json" },
