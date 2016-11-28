@@ -3,7 +3,7 @@
   "properties": {
     "data": {
       "type": "object",
-      "required": ["metadata"],
+      "required": ["metadata", "deactivated_by"],
       "properties": {
         "metadata": {"type": "string"},
         "deactivated_by": {
@@ -14,8 +14,7 @@
           ]
         },
         "deactivating_error": {
-          "type": "string",
-          "required": false
+          "type": "string"
         }
       }
     }
