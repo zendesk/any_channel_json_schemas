@@ -1,0 +1,22 @@
+{
+  "$ref": "any_channel_event_base.json#/definitions/any_channel_event_base",
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": ["metadata", "deactivated_by"],
+      "properties": {
+        "metadata": {"type": "string"},
+        "deactivated_by": {
+          "type": "string",
+          "enum": [
+            "error",
+            "api"
+          ]
+        },
+        "deactivating_error": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
