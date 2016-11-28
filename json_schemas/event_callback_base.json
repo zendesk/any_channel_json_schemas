@@ -10,6 +10,8 @@
           "enum": [
             "create_integration",
             "destroy_integration",
+            "activate_integration_instance",
+            "deactivate_integration_instance",
             "create_integration_instance",
             "destroy_integration_instance",
             "pull_request",
