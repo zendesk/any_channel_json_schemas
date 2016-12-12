@@ -12,7 +12,7 @@
     "display_info": {"type": "array", "items": {"$ref": "#/definitions/display_info"} },
     "allow_channelback": {"type":"boolean"},
     "fields": {"type": "array", "items": {"$ref": "#/definitions/field_value"} },
-    "attachments": {"type": "array", "items": {"$ref": "#/definitions/attachment_value"}, "maxItems": 10 }
+    "file_urls": {"type": "array", "items": {"$ref": "#/definitions/file_url"}, "maxItems": 10 }
   },
   "definitions": {
     "external_resource": {
@@ -43,7 +43,7 @@
         "value": {"type": "any"}
       }
     },
-    "attachment_value": {
+    "file_url": {
       "type": "string",
       "format": "https-url"
     }
