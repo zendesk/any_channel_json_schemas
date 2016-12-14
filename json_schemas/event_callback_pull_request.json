@@ -12,7 +12,7 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["external_id", "request_id", "ticket_id", "comment_id"],
+            "required": ["external_id", "request_id"],
             "properties": {
               "external_id": {"type": "string"},
               "request_id": {"type": "string"},
