@@ -2,8 +2,8 @@
   "type": "object",
   "required": ["instance_push_id", "external_resources"],
   "properties": {
-    "instance_push_id": {"type": "string"},
-    "request_id": {"type": "string"},
+    "instance_push_id": {"type": "string", "minLength": 1},
+    "request_id": {"type": "string", "minLength": 1},
     "external_resources": {"type": "array", "items": { "$ref": "external_resource.json"} }
   }
 }

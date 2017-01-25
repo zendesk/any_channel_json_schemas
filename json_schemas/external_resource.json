@@ -2,11 +2,11 @@
   "type": "object",
   "required": ["external_id", "message", "author", "created_at"],
   "properties": {
-    "external_id": {"type": "string"},
+    "external_id": {"type": "string", "minLength": 1},
     "message": {"type": "string"},
     "html_message": {"type": "string"},
-    "parent_id": {"type": "string"},
-    "thread_id": {"type": "string"},
+    "parent_id": {"type": "string", "minLength": 1},
+    "thread_id": {"type": "string", "minLength": 1},
     "created_at": {"type": "string", "format": "date-time"},
     "author": {"$ref": "#/definitions/author"},
     "display_info": {"type": "array", "items": {"$ref": "#/definitions/display_info"} },
@@ -21,17 +21,17 @@
       "type": "object",
       "required": ["external_id"],
       "properties": {
-        "external_id": {"type": "string"},
-        "name": {"type": "string"},
-        "image_url": {"type": "string"},
-        "locale": {"type": "string"}
+        "external_id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "image_url": {"type": "string", "minLength": 1},
+        "locale": {"type": "string", "minLength": 1}
       }
     },
     "display_info": {
       "type": "object",
       "required": ["type", "data"],
       "properties": {
-        "type": {"type": "string"},
+        "type": {"type": "string", "minLength": 1},
         "data": {"type": "object"}
       }
     },
@@ -39,7 +39,7 @@
       "type": "object",
       "required": ["id", "value"],
       "properties": {
-        "id": {"type": ["integer", "string"]},
+        "id": {"type": ["integer", "string"], "minLength": 1},
         "value": {"type": "any"}
       }
     },
