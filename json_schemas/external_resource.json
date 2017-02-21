@@ -3,8 +3,8 @@
   "required": ["external_id", "message", "author", "created_at"],
   "properties": {
     "external_id": {"type": "string", "minLength": 1},
-    "message": {"type": "string"},
-    "html_message": {"type": "string"},
+    "message": {"type": "string", "minLength": 1},
+    "html_message": {"type": "string", "minLength": 1},
     "parent_id": {"type": "string", "minLength": 1},
     "thread_id": {"type": "string", "minLength": 1},
     "created_at": {"type": "string", "format": "date-time"},
