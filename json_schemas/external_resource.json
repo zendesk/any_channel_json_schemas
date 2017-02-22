@@ -2,11 +2,11 @@
   "type": "object",
   "required": ["external_id", "message", "author", "created_at"],
   "properties": {
-    "external_id": {"type": "string", "minLength": 1},
+    "external_id": {"type": "string", "minLength": 1, "format": "external-id"},
     "message": {"type": "string", "minLength": 1},
     "html_message": {"type": "string", "minLength": 1},
-    "parent_id": {"type": "string", "minLength": 1},
-    "thread_id": {"type": "string", "minLength": 1},
+    "parent_id": {"type": "string", "minLength": 1, "format": "external-id"},
+    "thread_id": {"type": "string", "minLength": 1, "format": "external-id"},
     "created_at": {"type": "string", "format": "date-time"},
     "author": {"$ref": "#/definitions/author"},
     "display_info": {"type": "array", "items": {"$ref": "#/definitions/display_info"} },
@@ -21,7 +21,7 @@
       "type": "object",
       "required": ["external_id"],
       "properties": {
-        "external_id": {"type": "string", "minLength": 1},
+        "external_id": {"type": "string", "minLength": 1, "format": "external-id"},
         "name": {"type": "string", "minLength": 1},
         "image_url": {"type": "string", "minLength": 1},
         "locale": {"type": "string", "minLength": 1}

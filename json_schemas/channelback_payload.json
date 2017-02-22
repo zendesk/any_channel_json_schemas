@@ -2,7 +2,7 @@
   "type": "object",
   "required": ["external_id"],
   "properties": {
-    "external_id": {"type": "string"},
+    "external_id": {"type": "string", "format": "external-id"},
     "allow_channelback": {"type": "boolean"},
     "metadata_needs_update": {"type": "boolean"},
     "metadata": {"type": "string"}

@@ -18,6 +18,21 @@ The schemas and libraries in this repo and intended to be used in code and we wa
 
 To make sure this is always the case we're letting the community in on our super secret internal code name. Don't tell anyone ;)
 
+### Custom formats
+
+These schemas use some custom formats
+
+* https-url
+* external-id
+
+#### https-url
+
+This custom format enforces that the URL uses the HTTPS scheme.  For example, 'https://www.test.com/document' passes, but 'http://www.test.com/document' does not.
+
+#### external-id
+
+This custom format enforces that the string does not include leading or trailing whitespace.  For example '123' passes, but '123 ' does not.
+
 ### License
 
 [Apache License](./LICENSE)
