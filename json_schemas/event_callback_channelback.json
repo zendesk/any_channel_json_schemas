@@ -1,0 +1,14 @@
+{
+  "$ref": "event_callback_base.json#/definitions/event_callback_base",
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": ["integration_instance_name", "url", "request_id"],
+      "properties": {
+        "integration_instance_name": {"type": "string"},
+        "url": {"type": "string", "format": "https-url"},
+        "request_id": {"type": "string"},
+      }
+    }
+  }
+}
