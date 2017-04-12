@@ -9,10 +9,10 @@
     "thread_id": {"type": "string", "minLength": 1, "maxLength": 255, "format": "external-id"},
     "created_at": {"type": "string", "maxLength": 255, "format": "date-time"},
     "author": {"$ref": "#/definitions/author"},
-    "display_info": {"type": "array", "maxIems": 16, "items": {"$ref": "#/definitions/display_info"} },
+    "display_info": {"type": "array", "maxItems": 16, "items": {"$ref": "#/definitions/display_info"} },
     "allow_channelback": {"type":"boolean"},
-    "fields": {"type": "array", "maxIems": 64, "items": {"$ref": "#/definitions/field_value"} },
-    "file_urls": {"type": "array", "maxIems": 64, "items": {"$ref": "#/definitions/file_url"} }
+    "fields": {"type": "array", "maxItems": 64, "items": {"$ref": "#/definitions/field_value"} },
+    "file_urls": {"type": "array", "maxItems": 64, "items": {"$ref": "#/definitions/file_url"} }
   },
   "definitions": {
     "external_resource": {
