@@ -3,7 +3,7 @@
   "required": ["external_resources"],
   "properties": {
     "state": {"type": "string", "maxLength": 5000},
-    "external_resources": {"type": "array", "items": { "$ref": "external_resource.json"} },
+    "external_resources": {"type": "array", "maxItems": 256, "items": { "$ref": "external_resource.json"} },
     "metadata_needs_update": {"type": "boolean"},
     "metadata": {"type": "string", "maxLength": 5000}
   }

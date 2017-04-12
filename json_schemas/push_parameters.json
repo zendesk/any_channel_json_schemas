@@ -4,6 +4,6 @@
   "properties": {
     "instance_push_id": {"type": "string", "minLength": 1, "maxLength": 255},
     "request_id": {"type": "string", "minLength": 1, "maxLength": 64},
-    "external_resources": {"type": "array", "items": { "$ref": "external_resource.json"} }
+    "external_resources": {"type": "array", "maxItems": 256, "items": { "$ref": "external_resource.json"} }
   }
 }
