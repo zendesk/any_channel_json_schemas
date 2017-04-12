@@ -2,12 +2,12 @@
   "type": "object",
   "required": ["external_id", "message", "author", "created_at"],
   "properties": {
-    "external_id": {"type": "string", "minLength": 1, "format": "external-id"},
-    "message": {"type": "string", "minLength": 1},
-    "html_message": {"type": "string", "minLength": 1},
-    "parent_id": {"type": "string", "minLength": 1, "format": "external-id"},
-    "thread_id": {"type": "string", "minLength": 1, "format": "external-id"},
-    "created_at": {"type": "string", "format": "date-time"},
+    "external_id": {"type": "string", "minLength": 1, "maxLength": 255, "format": "external-id"},
+    "message": {"type": "string", "minLength": 1, "maxLength": 65535},
+    "html_message": {"type": "string", "minLength": 1, "maxLength": 65535},
+    "parent_id": {"type": "string", "minLength": 1, "maxLength": 255, "format": "external-id"},
+    "thread_id": {"type": "string", "minLength": 1, "maxLength": 255, "format": "external-id"},
+    "created_at": {"type": "string", "maxLength": 255, "format": "date-time"},
     "author": {"$ref": "#/definitions/author"},
     "display_info": {"type": "array", "items": {"$ref": "#/definitions/display_info"} },
     "allow_channelback": {"type":"boolean"},
@@ -21,17 +21,17 @@
       "type": "object",
       "required": ["external_id"],
       "properties": {
-        "external_id": {"type": "string", "minLength": 1, "format": "external-id"},
-        "name": {"type": "string", "minLength": 1},
-        "image_url": {"type": "string", "minLength": 1},
-        "locale": {"type": "string", "minLength": 1}
+        "external_id": {"type": "string", "minLength": 1, "maxLength": 255, "format": "external-id"},
+        "name": {"type": "string", "minLength": 1, "maxLength": 255},
+        "image_url": {"type": "string", "minLength": 1, "maxLength": 511},
+        "locale": {"type": "string", "minLength": 1, "maxLength": 255}
       }
     },
     "display_info": {
       "type": "object",
       "required": ["type", "data"],
       "properties": {
-        "type": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1, "maxLength": 255},
         "data": {"type": "object"}
       }
     },
@@ -39,13 +39,14 @@
       "type": "object",
       "required": ["id", "value"],
       "properties": {
-        "id": {"type": ["integer", "string"], "minLength": 1},
+        "id": {"type": ["integer", "string"], "minLength": 1, "maxLength": 255},
         "value": {"type": "any"}
       }
     },
     "file_url": {
       "type": "string",
-      "format": "https-url"
+      "format": "https-url",
+      "maxLength": 511
     }
   }
 }

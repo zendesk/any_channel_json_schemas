@@ -5,11 +5,11 @@
       "type": "object",
       "required": ["name", "id", "urls"],
       "properties": {
-        "name": {"type": "string", "minLength": 1},
-        "id": {"type": "string", "minLength": 1},
-        "version": {"type": "string", "minLength": 1},
-        "author": {"type": "string", "minLength": 1},
-        "push_client_id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1, "maxLength": 255},
+        "id": {"type": "string", "minLength": 1, "maxLength": 511},
+        "version": {"type": "string", "minLength": 1, "maxLength": 255},
+        "author": {"type": "string", "minLength": 1, "maxLength": 255},
+        "push_client_id": {"type": "string", "minLength": 1, "maxLength": 128},
         "urls": { "$ref": "#/definitions/manifest/definitions/urls"}
       },
       "definitions": {
@@ -17,14 +17,14 @@
           "type": "object",
           "required": ["admin_ui"],
           "properties": {
-            "admin_ui": {"type": "string", "format": "https-url"},
-            "pull_url": {"type": "string", "format": "https-url"},
-            "channelback_url": {"type": "string", "format": "https-url"},
-            "clickthrough_url": {"type": "string", "format": "https-url"},
-            "healthcheck_url": {"type": "string"},
-            "about_url": {"type": "string"},
-            "dashboard_url": {"type": "string"},
-            "event_callback_url": {"type": "string", "format": "https-url"}
+            "admin_ui": {"type": "string", "maxLength": 511, "format": "https-url"},
+            "pull_url": {"type": "string", "maxLength": 511, "format": "https-url"},
+            "channelback_url": {"type": "string", "maxLength": 511, "format": "https-url"},
+            "clickthrough_url": {"type": "string", "maxLength": 511, "format": "https-url"},
+            "healthcheck_url": {"type": "string", "maxLength": 511},
+            "about_url": {"type": "string", "maxLength": 511},
+            "dashboard_url": {"type": "string", "maxLength": 511},
+            "event_callback_url": {"type": "string", "maxLength": 511, "format": "https-url"}
           }
         }
       }
