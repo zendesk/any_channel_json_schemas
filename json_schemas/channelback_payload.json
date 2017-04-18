@@ -1,4 +1,5 @@
 {
+  "description": "Expected payload in response to a channelback request.",
   "type": "object",
   "required": ["external_id"],
   "properties": {
