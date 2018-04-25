@@ -10,6 +10,7 @@
         "version": {"type": "string", "minLength": 1, "maxLength": 255},
         "author": {"type": "string", "minLength": 1, "maxLength": 255},
         "push_client_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "channelback_files": {"type": "boolean"},
         "urls": { "$ref": "#/definitions/manifest/definitions/urls"}
       },
       "definitions": {
