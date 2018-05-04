@@ -18,6 +18,7 @@ pull_payload
 external_resource
 push_parameters
 channelback_payload
+report_channelback_error
 event_callback_any
 event_callback_base
 event_callback_create_integration
