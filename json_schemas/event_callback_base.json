@@ -15,7 +15,8 @@
             "create_integration_instance",
             "destroy_integration_instance",
             "pull_request",
-            "resources_created_from_external_ids"
+            "resources_created_from_external_ids",
+            "channelback"
           ]
         },
         "timestamp": {"type": "time"},
