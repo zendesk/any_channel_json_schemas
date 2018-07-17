@@ -3,10 +3,11 @@
   "properties": {
     "data": {
       "type": "object",
-      "required": ["integration_instance_name", "url"],
+      "required": ["integration_instance_name", "url", "request_id"],
       "properties": {
         "integration_instance_name": {"type": "string"},
-        "url": {"type": "string", "format": "https-url"}
+        "url": {"type": "string", "format": "https-url"},
+        "request_id": {"type": "string"}
       }
     }
   }
