@@ -24,7 +24,8 @@
         "external_id": {"type": "string", "minLength": 1, "maxLength": 255, "format": "external-id"},
         "name": {"type": "string", "minLength": 1, "maxLength": 255},
         "image_url": {"type": "string", "minLength": 1, "maxLength": 511},
-        "locale": {"type": "string", "minLength": 1, "maxLength": 255}
+        "locale": {"type": "string", "minLength": 1, "maxLength": 255},
+        "fields": {"type": "array", "maxItems": 64, "items": {"$ref": "#/definitions/field_value"} }
       }
     },
     "display_info": {
