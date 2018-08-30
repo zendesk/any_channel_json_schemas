@@ -12,7 +12,7 @@
     "display_info": {"type": "array", "maxItems": 16, "items": {"$ref": "#/definitions/display_info"} },
     "allow_channelback": {"type":"boolean"},
     "fields": {"type": "array", "maxItems": 64, "items": {"$ref": "#/definitions/field_value"} },
-    "file_urls": {"type": "array", "maxItems": 64, "items": {"$ref": "#/definitions/file_url"} }
+    "file_urls": {"type": "array", "maxItems": 10, "items": {"$ref": "#/definitions/file_url"} }
   },
   "definitions": {
     "external_resource": {
