@@ -23,9 +23,9 @@
             "pull_url": {"type": "string", "maxLength": 511, "format": "https-url"},
             "channelback_url": {"type": "string", "maxLength": 511, "format": "https-url"},
             "clickthrough_url": {"type": "string", "maxLength": 511, "format": "https-url"},
-            "healthcheck_url": {"type": "string", "maxLength": 511},
-            "about_url": {"type": "string", "maxLength": 511},
-            "dashboard_url": {"type": "string", "maxLength": 511},
+            "healthcheck_url": {"type": "string", "maxLength": 511, "format": "https-url"},
+            "about_url": {"type": "string", "maxLength": 511, "format": "https-url"},
+            "dashboard_url": {"type": "string", "maxLength": 511, "format": "https-url"},
             "event_callback_url": {"type": "string", "maxLength": 511, "format": "https-url"}
           }
         }
