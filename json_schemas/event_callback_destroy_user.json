@@ -1,0 +1,12 @@
+{
+  "$ref": "event_callback_base.json#/definitions/event_callback_base",
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": ["metadata"],
+      "properties": {
+        "metadata": {"type": "string"}
+      }
+    }
+  }
+}

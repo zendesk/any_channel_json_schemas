@@ -14,6 +14,7 @@
             "deactivate_integration_instance",
             "create_integration_instance",
             "destroy_integration_instance",
+            "destroy_user_identity",
             "pull_request",
             "resources_created_from_external_ids",
             "channelback"
