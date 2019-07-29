@@ -9,6 +9,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- spec/*`.split("\n")
   gem.name          = 'any_channel_json_schemas'
   gem.require_paths = ['lib']
-  gem.version       = '0.10.0'
+  gem.version       = '0.11.0'
   gem.license       = 'Apache-2.0'
 end
