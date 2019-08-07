@@ -25,6 +25,7 @@ event_callback_create_integration
 event_callback_create_integration_instance
 event_callback_destroy_integration
 event_callback_destroy_integration_instance
+event_callback_destroy_user
 event_callback_pull_request
 event_callback_resources_created_from_external_ids
 ```
@@ -49,4 +50,4 @@ Feel free to open an issue or fork the repo and submit a PR.
 
 ### Contact
 
-jshay@zendesk.com
+ocean@zendesk.com
