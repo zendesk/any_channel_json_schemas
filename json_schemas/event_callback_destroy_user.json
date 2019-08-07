@@ -3,8 +3,15 @@
   "properties": {
     "data": {
       "type": "object",
-      "required": ["metadata"],
+      "required": ["author", "metadata"],
       "properties": {
+        "author": {
+            "type": "object",
+            "required": ["external_id"],
+            "properties": {
+               "external_id": {"type": "string"}
+            }
+        },
         "metadata": {"type": "string"}
       }
     }
