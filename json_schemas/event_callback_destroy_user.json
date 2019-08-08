@@ -3,7 +3,7 @@
   "properties": {
     "data": {
       "type": "object",
-      "required": ["author", "metadata"],
+      "required": ["author"],
       "properties": {
         "author": {
             "type": "object",
