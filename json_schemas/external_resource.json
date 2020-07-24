@@ -3,6 +3,7 @@
   "required": ["external_id", "message", "author", "created_at"],
   "properties": {
     "external_id": {"type": "string", "minLength": 1, "maxLength": 255, "format": "external-id"},
+    "internal_note": {"type": "boolean"},
     "message": {"type": "string", "minLength": 1, "maxLength": 65535},
     "html_message": {"type": "string", "minLength": 1, "maxLength": 65535},
     "parent_id": {"type": "string", "minLength": 1, "maxLength": 255, "format": "external-id"},
