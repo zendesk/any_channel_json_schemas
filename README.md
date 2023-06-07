@@ -31,7 +31,8 @@ This custom format enforces that the URL uses the HTTPS scheme.  For example, 'h
 
 #### external-id
 
-This custom format enforces that the string does not include leading or trailing whitespace.  For example '123' passes, but '123 ' does not.
+* This custom format enforces that the string does not include leading or trailing whitespace.  For example '123' passes, but '123 ' does not.
+* The [Channel Payload V2](./json_schemas/channelback_payload_v2.json) enforces the value as non-nil. For example '123' passes, but '' does not.
 
 ### License
 
