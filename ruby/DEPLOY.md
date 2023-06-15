@@ -6,5 +6,6 @@ Then reach out to any of the gem owners (run `gem owner any_channel_json_schemas
 To push a new version the steps are:
 
 1. Update the version in the gemspec file.
+2. Navigate to ./ruby directory.
 2. Run `gem build any_channel_json_schemas.gemspec` *this will create a .gem file*
 3. Run `gem push any_channel_json_schemas-<version>.gem`
